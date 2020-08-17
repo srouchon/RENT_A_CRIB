@@ -15,7 +15,11 @@ Product.create!(name: 'crib',description: 'baby bedside bassinet, 3 in 1 portabl
 Product.create!(name: 'double toddlerbed',description: 'delta children interactive wood toddlerbed disney minnie mouse', price: '5', city: 'Bordeaux')
 Product.create!(name: 'single toddlerbed',description: 'delta children 3D footboard toddlerbed, cars 3 twingle stars fiber', price: '6', city: 'Bordeaux')
 
-# puts 'create some users'
+puts 'create some users'
+User.create!(first_name:"ophelie", last_name:"roux", email:"ophelie@gmail.com", password:"ophelie")
+User.create!(first_name:"deva", last_name:"sou", email:"deva@gmail.com", password:"deva")
+User.create!(first_name:"victorien", last_name:"brun", email:"victorien@gmail.com", password:"victorien")
+User.create!(first_name:"sophie", last_name:"rouchon", email:"sophie@gmail.com", password:"sophie")
 
 # puts 'create some bookings'
 
