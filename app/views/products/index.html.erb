@@ -9,13 +9,19 @@
 <ul>
   <% @products.each do |product| %>
     <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-photo">
+        <img src="https://source.unsplash.com/random" />
+      </div>
       <div class="card-product-infos">
         <h2><%= product.name %></h2>
         <p><%= product.description %></p>
         <p><%= product.city %></p>
-        <p><%= product.price %> € per day</p>
+      </div>
+      <div class="card-product-price-book align-items-center">
         <i class="far fa-heart fav-prod"></i>
+        <p><%= product.price %> € per day</p>
+        <%= link_to "Book now", "#", class: "btn btn-flat" %>
+      </div>
       </div>
     </div>
   <% end %>
