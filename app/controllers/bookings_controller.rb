@@ -11,6 +11,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking = Booking.find(booking_params)
+    @booking.destroy
+    redirect_to product_booking_path(@booking.product)
   end
 
   private
