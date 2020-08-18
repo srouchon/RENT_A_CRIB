@@ -1,0 +1,12 @@
+<h1>Bookings#index</h1>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+      <div><%= booking.product.name %></div>
+      <div><%= booking.product.description %></div>
+      <div><%= booking.product.city %></div>
+      <div><%= booking.product.price %> </div>
+    </li>
+  <% end %>
+</ul>
