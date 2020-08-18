@@ -3,8 +3,7 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @user = current_user
-    @booking = Booking.new(user_id: @user)
+    @booking = Booking.new(user_id: current_user)
     @product = Product.find(params[:product_id])
   end
 
