@@ -1,16 +1,24 @@
 <h1>Products#index</h1>
 <p>Find me in app/views/products/index.html.erb</p>
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Rent a Crib</strong>!</h1>
+    <p>Give a new life to child care!</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
 <ul>
   <% @products.each do |product| %>
-    <h3>Product Name</h3>
-    <li><%= product.name %></li>
-    <h3>Product Description</h3>
-    <li><%= product.description %></li>
-    <h3>Product City</h3>
-    <li><%= product.city %></li>
-    <h3>Product Price</h3>
-    <li><%= product.price %></li>
-    <hr>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <p><%= product.city %></p>
+        <p><%= product.price %></p>
+      </div>
+    </div>
   <% end %>
 </ul>
