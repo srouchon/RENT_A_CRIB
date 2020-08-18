@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'clean DB'
 Product.destroy_all
+User.destroy_all
 
 puts 'create some products'
 Product.create!(name: 'yoyo stroller',description: 'black yoyo black yoyo black yoyo black yoyo black yoyo black yoyo', price: '5', city: 'Bordeaux')
@@ -17,7 +18,7 @@ Product.create!(name: 'single toddlerbed',description: 'delta children 3D footbo
 
 puts 'create some users'
 User.create!(first_name:"ophelie", last_name:"roux", email:"ophelie@gmail.com", password:"ophelie")
-User.create!(first_name:"deva", last_name:"sou", email:"deva@gmail.com", password:"deva")
+User.create!(first_name:"deva", last_name:"sou", email:"deva@gmail.com", password:"devadeva")
 User.create!(first_name:"victorien", last_name:"brun", email:"victorien@gmail.com", password:"victorien")
 User.create!(first_name:"sophie", last_name:"rouchon", email:"sophie@gmail.com", password:"sophie")
 
