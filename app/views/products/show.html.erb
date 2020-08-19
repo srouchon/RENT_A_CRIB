@@ -1,10 +1,22 @@
 <div class="container">
-  <h1><%= @product.name %></h1>
-  <p><%= @product.description %></p>
-  <p><%= @product.price %> €</p>
-  <%= link_to 'Send a message', '#', class: 'btn btn-light' %>
-  <%= link_to 'Book', new_product_booking_path(@product), class: 'btn btn-primary' %>
-  <%= link_to 'Favorite', '#', class: 'btn btn-light' %>
+  <div class="row d-flex">
+    <%= image_tag 'crib.jpg', class: "product-image col-sm-12 col-lg-8", alt: "crib" %>
+    <div class="product-show-content col-sm-12 col-lg-4">
+      <div class="product-content-text">
+        <div id="product-price">
+          <p><%= @product.price %> € per day</p>
+        </div>
+        <div id="product-description">
+          <h1><%= @product.name %></h1>
+          <p><%= @product.description %></p>
+        </div>
+        <div id="product-btn">
+          <%= link_to 'Book it !', new_product_booking_path(@product), class: 'btn btn-info mb-3' %>
+          <%= link_to 'Send a message to owner', '#', class: 'btn btn-light mb-3' %>
+          <%= link_to 'Add to favorites', '#', class: 'btn btn-light mb-3' %>
+        </div>
+      </div>
+    </div>
+  </div>
   <%= link_to '< Back', root_path, class: 'btn btn-dark' %>
 </div>
-

@@ -1,0 +1,44 @@
+.container{
+  font-family: Montserrat;
+}
+
+.row {
+  display: flex;
+}
+
+.product-image {
+  width: 650px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.product-content-text {
+  background-color: #FFF;
+  padding: 24px 24px;
+  display: grid;
+  text-align: top left;
+}
+
+#product-price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+#product-description > h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#product-btn {
+  display: grid;
+  text-align: bottom;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 16px auto;
+}
