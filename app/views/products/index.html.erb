@@ -9,14 +9,14 @@
 <ul>
   <% @products.each do |product| %>
     <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= product.name %></h2>
-        <p><%= product.description %></p>
-        <p><%= product.city %></p>
-        <p><%= product.price %> € per day</p>
-        <i class="far fa-heart fav-prod"></i>
-      </div>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-product-infos">
+          <div>
+            <h2><%= product.name %></h2>
+          </div>
+          <h2 class="card-product-pricing"><%= product.price %> € per day</h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-product-user avatar-bordered" />
+        </div>
     </div>
   <% end %>
 </ul>
