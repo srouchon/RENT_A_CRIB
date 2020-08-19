@@ -9,17 +9,25 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @booking = Booking.new(booking_params)
+    @booking.product = Product.find(params[:product_id])
+    @booking.user = current_user
+    if @booking.save
+      redirect_to bookings_path
+    else
+      render :new
+    end
   end
 
   def destroy
-    @booking = Booking.find(booking_params)
+    @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to product_booking_path(@booking.product)
+    redirect_to bookings_path
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:price, :start_date, :end_date, :product_id)
+    params.require(:booking).permit(:price, :start_date, :end_date)
   end
 end
