@@ -12,9 +12,8 @@
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="card-product-infos">
         <h2><%= product.name %></h2>
-        <p><%= product.description %></p>
-        <p><%= product.city %></p>
         <p><%= product.price %> € per day</p>
+        <p><%= link_to 'See more', product_path(product), class: 'btn btn-primary' %></p>
         <i class="far fa-heart fav-prod"></i>
       </div>
     </div>

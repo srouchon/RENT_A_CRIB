@@ -2,8 +2,10 @@
 
 const element = document.querySelector('.fa-heart');
 
-element.addEventListener('click', (event) => {
-  console.log(element)
-  element.classList.toggle("fav-prod-color-red");
-});
+if (element) {
+  element.addEventListener('click', (event) => {
+    console.log(element);
+    element.classList.toggle("fav-prod-color-red");
+  });
+}
 

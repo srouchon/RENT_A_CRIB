@@ -2,6 +2,9 @@
   <h1><%= @product.name %></h1>
   <p><%= @product.description %></p>
   <p><%= @product.price %> €</p>
+  <%= link_to 'Send a message', '#', class: 'btn btn-light' %>
   <%= link_to 'Book', new_product_booking_path(@product), class: 'btn btn-primary' %>
+  <%= link_to 'Favorite', '#', class: 'btn btn-light' %>
+  <%= link_to '< Back', root_path, class: 'btn btn-dark' %>
 </div>
 
