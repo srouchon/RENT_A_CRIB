@@ -1,0 +1,22 @@
+.fav-prod{
+  position: absolute;
+  right: 16px;
+  margin-top: 12px;
+  color:black;
+  font-size: 16px;
+  background-color: white;
+  padding: 8px;
+  border-radius:50px;
+
+  -webkit-box-shadow: 22px 25px 72px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 22px 25px 72px 1px rgba(0,0,0,0.75);
+  box-shadow: 22px 25px 72px 1px rgba(0,0,0,0.75);
+}
+
+.card-product .fav-prod {
+
+}
+
+.fav-prod-color-red {
+  color: $red;
+}
