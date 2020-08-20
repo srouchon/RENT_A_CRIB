@@ -7,14 +7,12 @@
     %>
     <%= submit_tag "Search", class: "btn btn-info" %>
   <% end %>
-<!-- <input class="form-control d-inline-flex justify-content-aroundd-flex " type="text" placeholder="What baby supply are you looking for?" aria-label="Search">
-<input class="form-control d-inline-flex justify-content-aroundd-flex " type="text" placeholder="Enter a location" aria-label="Search">
-<div class="search-button d-inline-flex"> -->
-<!-- <i class="fas fa-search"></i> -->
-<!-- </div> -->
 </div>
 
-<ul>
+<div class="container">
+  <div class="row d-flex justify-content-center mt-2">
+    <%= link_to 'See all products', root_path, class: 'btn btn-info' %>
+  </div>
   <div class="card-container">
     <% @products.each do |product| %>
       <div class="card">
@@ -31,7 +29,7 @@
           <p><%= link_to 'See more', product_path(product), class: 'btn btn-primary' %></p>
         </div>
       </div>
-    <% end %>
+    </div>
   </div>
-</ul>
+</div>
 
