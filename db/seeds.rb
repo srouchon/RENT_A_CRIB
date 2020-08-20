@@ -8,6 +8,7 @@
 puts 'clean DB'
 Product.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 puts 'create some products'
 a = Product.create!(name: 'Yoyo Stroller',description: 'YOYO2 stroller folds and unfolds with one hand, can be carried over the shoulder, slips in anywhere, stores easily and travels as carry-on-baggage', price: '5', city: 'Bordeaux', photo:'yoyostroller.jpg')
