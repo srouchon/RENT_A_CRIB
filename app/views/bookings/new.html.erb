@@ -1,9 +1,11 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
-<%= simple_form_for [@product, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Select your rental dates</h2>
 
-<!-- add flatpicker on THursday or Friday when we will be working on the front part -->
+    <%= simple_form_for ([@product, @booking]) do |f| %>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Book it!", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
