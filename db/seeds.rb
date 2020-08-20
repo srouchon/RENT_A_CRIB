@@ -8,6 +8,7 @@
 puts 'clean DB'
 Product.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 puts 'create some products'
 a = Product.create!(name: 'yoyo stroller',description: 'black yoyo black yoyo black yoyo black yoyo black yoyo black yoyo', price: '5', city: 'Bordeaux')
