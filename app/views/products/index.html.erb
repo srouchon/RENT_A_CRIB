@@ -15,7 +15,7 @@
   <div class="row d-flex justify-content-center mt-2">
     <%= link_to 'See all products', root_path, class: 'btn btn-info' %>
   </div>
-  <div class="card-container">
+  <div class="card-container d-flex flex-wrap">
     <% @products.each do |product| %>
       <div class="card">
         <i class="far fa-heart fav-prod" style="color: #DE7362;"></i>

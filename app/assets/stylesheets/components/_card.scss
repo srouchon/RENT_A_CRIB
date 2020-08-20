@@ -6,8 +6,8 @@ ul {
   padding: 0;
 }
 .card {
-  width: 300px;
-  height: 400px;
+  width: 33%;
+  height: 300px;
   background: #f4f4f4;
   position: relative;
   border-radius: 10px;
@@ -23,25 +23,20 @@ ul {
   box-shadow: 5px 20px 30px rgba(0,0,0,.2);
 }
 
-.imgBox{
-  // background-size: cover;
-  // background-image: cover;
-  // object-fit: cover;
-  // width: 600px;
-  height: 300px;
-  // overflow: hidden;
+.imgBox img {
+  width: 100%;
 }
 
-// img {
-//   width: 100%;
-//   height: 100%;
-// }
+.imgBox{
+  height: 260px;
+  overflow-y: hidden;
+}
 
 .details{
   position: absolute;
   width: 100%;
   height: 50%;
-  background: #f4f4f4be;
+  background: white;
   padding: 10px 20px;
   bottom: -30%;
   transition: .5s;
@@ -60,8 +55,8 @@ ul {
 h3{
   font-size: 20px;
   padding: 5px 0;
-  margin-bottom: 42px;
-  margin-top: -10px;
+  margin-bottom: 18px;
+  margin-top: -7px;
 }
 
 .price{
@@ -69,7 +64,7 @@ h3{
   top: 0;
   right: 0;
   font-size: 24px;
-  margin-top: 36px;
+  margin-top: 1px;
 }
 
 .fav-prod{
@@ -78,7 +73,12 @@ h3{
   margin-top: 12px;
 }
 
-
+.btn {
+  width: 100%;
+}
+p {
+  margin: 0;
+}
 // .card-product {
 //   overflow: hidden;
 //   height: 120px;
