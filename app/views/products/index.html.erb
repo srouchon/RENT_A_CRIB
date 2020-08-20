@@ -11,7 +11,7 @@
     <% @products.each do |product| %>
       <div class="card-product">
         <i class="far fa-heart fav-prod" style="color: #DE7362;"></i>
-        <%= image_tag "childbed.jpg" %>
+        <%= image_tag product.photo %>
           <div class="card-product-infos">
           <div>
             <h2><%= product.name %></h2>
