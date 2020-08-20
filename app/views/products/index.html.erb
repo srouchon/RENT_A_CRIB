@@ -1,12 +1,16 @@
-<div class="banner d-flex">
-  <%= form_tag root_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Search by name or city"
-    %>
-    <%= submit_tag "Search", class: "btn btn-info" %>
-  <% end %>
+<div class="banner">
+  <div class="search-feature">
+    <%= form_tag root_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control search-bar",
+        placeholder: "Search by name or city"
+      %>
+      <%= submit_tag "Search", class: "btn btn-info search-button" %>
+    <% end %>
+  </div>
+</div>
+
 <!-- <input class="form-control d-inline-flex justify-content-aroundd-flex " type="text" placeholder="What baby supply are you looking for?" aria-label="Search">
 <input class="form-control d-inline-flex justify-content-aroundd-flex " type="text" placeholder="Enter a location" aria-label="Search">
 <div class="search-button d-inline-flex"> -->
