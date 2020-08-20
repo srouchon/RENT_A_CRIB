@@ -15,18 +15,20 @@
 </div>
 
 <ul>
-  <div class = card-container>
+  <div class="card-container">
     <% @products.each do |product| %>
-      <div class="card-product">
+      <div class="card">
         <i class="far fa-heart fav-prod" style="color: #DE7362;"></i>
-        <%= image_tag "childbed.jpg" %>
-          <div class="card-product-infos">
-          <div>
-            <h2><%= product.name %></h2>
-            <h2 class="card-product-pricing"><%= product.price %> € per day</h2>
+        <div class="imgBox">
+          <%= image_tag "crib.jpg" %>
+          <%# <img src="../app/assets/images/crib.jpg"> %>
+        </div>
+        <div class="details">
+          <div class="textContent">
+            <h3><%= product.name %></h3>
+            <h2 class="price"><%= product.price %> €/day</h2>
           </div>
           <p><%= link_to 'See more', product_path(product), class: 'btn btn-primary' %></p>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-product-user avatar-bordered" />
         </div>
       </div>
     <% end %>
