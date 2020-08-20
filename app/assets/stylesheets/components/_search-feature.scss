@@ -1,12 +1,18 @@
 .search-feature {
+  flex-direction: row;
   width: 100%;
-  border-radius: 8px;
+  align-content: center;
+  justify-content: center;
 }
 
 .search-bar {
-
+  width: 85%;
+  color:grey;
 }
 
 .search-button {
+  margin: 8px;
+  width: 15%;
+  height: 95%;
 
 }
