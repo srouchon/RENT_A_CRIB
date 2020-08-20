@@ -1,19 +1,32 @@
-<h1>Bookings#index</h1>
-
-<ul>
-  <% @bookings.each do |booking| %>
-    <li>
-      <div><%= booking.product.name %></div>
-      <div><%= booking.product.description %></div>
-      <div><%= booking.product.city %></div>
-
-      <!-- Elements pour le price per day -->
-      <% booking.duration = (booking.end_date - booking.start_date).to_i %>
-      <% booking.price = booking.product.price * booking.duration %>
-
-      <div><%= booking.product.price %> € for <%= booking.duration %> days</div>
-      <div>Total: <%= booking.price %> €</div>
-      <%= link_to 'Cancel booking', booking_path(booking), method: :delete, class: 'btn btn-primary' %>
-    </li>
-  <% end %>
-</ul>
+<div class="container mt-5">
+  <h1>Your bookings</h1>
+  <div class="row d-flex mt-4">
+      <% @bookings.each do |booking| %>
+        <div class="booking-cards bg-white mb-4">
+            <div class="booking-card d-flex">
+              <%= image_tag booking.product.photo, class: "product-image col-sm-12 col-lg-8 p-4" %>
+              <div class="product-show-content col-sm-12 col-lg-4 d-flex align-items-end flex-column mt-2">
+                <div class="product-content-text">
+                  <div class="product-description">
+                    <h1><%= booking.product.name %></h1>
+                    <p><%= booking.product.description %></p>
+                    <p><%= booking.product.city %></p>
+                  </div>
+                  <div class="booking-price">
+                    <% booking.duration = (booking.end_date - booking.start_date).to_i %>
+                    <% booking.price = booking.product.price * booking.duration %>
+                    <div id="booking-price-day"><%= booking.product.price %> € for <%= booking.duration %> days</div>
+                    <div id="booking-total-price">Total: <%= booking.price %> €</div>
+                  </div>
+                </div>
+                <div class="booking-container-btn mt-auto">
+                  <div class="booking-btn">
+                    <%= link_to 'Cancel booking', booking_path(booking), method: :delete, class: 'btn btn-primary', style: "width: 100%; font-weight: bold; color: white" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      <% end %>
+  </div>
+</div>
