@@ -39,6 +39,14 @@
 }
 
 .btn {
+  border: none;
+  background-color: #DE7362;
+  color: white;
   font-weight: bold;
   padding: 16px auto;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #ffb934;
+  border-color: #ffb427;
 }

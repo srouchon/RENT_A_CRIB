@@ -13,7 +13,7 @@
 
       <div><%= booking.product.price %> € for <%= booking.duration %> days</div>
       <div>Total: <%= booking.price %> €</div>
-      <%= link_to 'Cancel booking', booking_path(booking), method: :delete, class: 'btn btn-primary' %>
+      <%= link_to 'Cancel booking', booking_path(booking), method: :delete, class: 'btn' %>
     </li>
   <% end %>
 </ul>
