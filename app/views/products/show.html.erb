@@ -7,15 +7,17 @@
           <p><%= @product.price %> € per day</p>
         </div>
         <div class="product-description">
-          <h1><%= @product.name %></h1>
-          <p><%= @product.description %></p>
+          <h1><%= @product.name %></h1><br>
+          <p><%= @product.description %></p><br>
+          <p><%= @product.city %></p>
+
         </div>
         <div class="product-btn-container">
           <div class='product-btn'>
             <%= link_to 'Book it!', new_product_booking_path(@product), class: 'btn btn-info mb-3', style: "width: 100%; font-weight: bold; color: white" %>
           </div>
           <div class="product-btn">
-            <%= link_to 'Send a message to owner', '#', class: 'btn btn-light mb-3', style: "width: 100%; font-weight: bold; color: white"  %>
+            <%= button_to 'Send a message to owner', '#', class: 'btn btn-light mb-3', style: "width: 100%; font-weight: bold; color: white", id: "disabledbutton" %>
           </div>
         </div>
       </div>

@@ -31,7 +31,14 @@ import {initFlatpickr} from "../plugins/flatpickr";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
+
+  // Disable Button :
+  const disabledButton = document.getElementById('disabledbutton')
+  if (disabledButton) {
+    console.log(disabledButton)
+    disabledButton.disabled = true;
+  }
+
   initFlatpickr();
   favButton
 });
