@@ -1,14 +1,20 @@
-<div class="container">
-  <h1>Favorites#index</h1>
-
-  <ul>
+<div class="container mt-5">
+  <h1>Your favorites</h1>
+  <div class="card-container d-flex flex-wrap">
     <% @favorites.each do |favorite| %>
-      <li>
-        <div><%= favorite.product.name %></div>
-        <div><%= favorite.product.description %></div>
-        <div><%= favorite.product.city %></div>
-        <div><%= favorite.product.price %> € per day</div>
-      </li>
+      <div class="card">
+        <div class="imgBox">
+          <%= image_tag favorite.product.photo %>
+        </div>
+        <div class="details">
+          <div class="textContent">
+            <h3><%= favorite.product.name %></h3>
+            <h2 class="price"><%= favorite.product.price %> €/day</h2>
+          </div>
+          <p><%= link_to 'See product', product_path(favorite.product), class: 'btn' %></p>
+          <p><%= link_to 'Remove', favorite_path(favorite), method: :delete, class: 'btn mt-1' %></p>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
