@@ -23,10 +23,9 @@
         <% else %>
           <%= link_to product_favorites_path(product), method: :post, remote: :true do  %>
             <i class="fas fa-heart fav-prod"></i>
-            <p class="city-name-card"><%= product.city %></p>
           <% end %>
         <% end %>
-
+          <p class="city-name-card"><%= product.city %></p>
         <div class="imgBox">
           <%= image_tag product.photo %>
         </div>
