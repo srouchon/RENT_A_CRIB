@@ -11,12 +11,12 @@
 //   });
 // }
 
-document.querySelectorAll(".fa-heart").forEach((heart) => {
-  if (heart) {
-      heart.addEventListener("click", (event) => {
-      console.log(heart);
-      heart.classList.toggle("fav-prod-color-red");
-    });
-  };
-});
+// document.querySelectorAll(".fa-heart").forEach((heart) => {
+//   if (heart) {
+//       heart.addEventListener("click", (event) => {
+//       console.log(heart);
+//       heart.classList.toggle("fav-prod-color-red");
+//     });
+//   };
+// });
 

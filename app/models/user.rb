@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :favorites
   has_many :products, through: :bookings
+  has_many :fav_products, through: :favorites, class_name: "Product", foreign_key: "product_id", source: :product
 end
