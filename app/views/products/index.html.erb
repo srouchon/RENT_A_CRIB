@@ -11,11 +11,11 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row d-flex justify-content-center mt-2">
+<div class="container pb-4">
+  <div class="row d-flex justify-content-center mx-3 mt-3">
     <%= link_to 'See all products', root_path, class: 'btn btn-info' %>
   </div>
-  <div class="card-container d-flex flex-wrap">
+  <div class="card-container pt-2 d-flex justify-content-center flex-wrap">
     <% @products.each do |product| %>
       <div class="card" id="<%= product.id %>">
         <% if current_user && current_user.fav_products.include?(product) %>
