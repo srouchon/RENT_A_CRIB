@@ -17,8 +17,15 @@
   </div>
   <div class="card-container d-flex flex-wrap">
     <% @products.each do |product| %>
-      <div class="card">
-        <i class="fas fa-heart fav-prod"></i>
+      <div class="card" id="<%= product.id %>">
+        <% if current_user && current_user.fav_products.include?(product) %>
+          <i class="fas fa-heart fav-prod fav-prod-color-red"></i>
+        <% else %>
+          <%= link_to product_favorites_path(product), method: :post, remote: :true do  %>
+            <i class="fas fa-heart fav-prod"></i>
+          <% end %>
+        <% end %>
+
         <div class="imgBox">
           <%= image_tag product.photo %>
         </div>
@@ -27,7 +34,7 @@
             <h3><%= product.name %></h3>
             <h2 class="price"><%= product.price %> €/day</h2>
           </div>
-          <p><%= link_to 'See more', product_path(product), class: 'btn btn-primary' %></p>
+          <p><%= link_to 'See more', product_path(product), class: 'btn' %></p>
         </div>
       </div>
     <% end %>

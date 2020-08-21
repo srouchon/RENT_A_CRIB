@@ -4,8 +4,11 @@ class FavoritesController < ApplicationController
   end
 
   def create
-  end
-
-  def destroy
+    @favorite = Favorite.new
+    @favorite.user = current_user
+    @product = Product.find(params[:product_id])
+    @favorite.product = @product
+    @favorite.save
+    redirect_to root_path(anchor: @product.id)
   end
 end
