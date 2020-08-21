@@ -9,13 +9,20 @@
                 <div class="product-content-text">
                   <div class="product-description">
                     <h1><%= booking.product.name %></h1>
+                    <br>
                     <p><%= booking.product.description %></p>
+                    <br>
                     <p><%= booking.product.city %></p>
                   </div>
+                  <br>
+                  <div class="booking-dates">
+                    <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
+                  </div>
+                  <br>
                   <div class="booking-price">
                     <% booking.duration = (booking.end_date - booking.start_date).to_i %>
                     <% booking.price = booking.product.price * booking.duration %>
-                    <div id="booking-price-day"><%= booking.product.price %> € for <%= booking.duration %> days</div>
+                    <div id="booking-price-day"><%= booking.product.price %> €/day for <%= booking.duration %> days</div>
                     <div id="booking-total-price">Total: <%= booking.price %> €</div>
                   </div>
                 </div>
